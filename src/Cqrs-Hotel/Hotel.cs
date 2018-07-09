@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Autofac;
-using Cqrs.Hotel.Command.Sagas.LeaveRoom;
+using Cqrs.Hotel.Command.Commands.LeaveRoom;
+using Cqrs.Hotel.Data;
 using Cqrs.Hotel.Domain;
 using Cqrs.Hotel.Infraestructure;
 using MediatR;
@@ -43,6 +44,8 @@ namespace Cqrs.Hotel
 
             builder.RegisterType<MemoryBus>().As<IBus>();
             builder.RegisterType<DomainEventStore>().As<IDomainEventStore>();
+            builder.RegisterType<ClientRepository>().As<IClientRepository>();
+            builder.RegisterType<BookingRepository>().As<IBookingRepository>();
 
 
             var container = builder.Build();

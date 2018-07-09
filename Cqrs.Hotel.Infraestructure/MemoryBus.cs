@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Cqrs.Hotel.Command;
 using Cqrs.Hotel.Command.Infraestructure;
-using Cqrs.Hotel.Command.Sagas.LeaveRoom;
 using Cqrs.Hotel.Domain;
 using Cqrs.Hotel.Domain.Events;
 using Cqrs.Hotel.Domain.Events.LeftClientRoom;

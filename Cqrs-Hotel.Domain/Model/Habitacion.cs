@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Cqrs.Hotel.Domain.Events.ClientBookedRoom;
 
 namespace Cqrs.Hotel.Domain.Model
 {
@@ -9,6 +10,11 @@ namespace Cqrs.Hotel.Domain.Model
         public void AddReview(Review review)
         {
             Reviews.Add(review);
+        }
+
+        public void Book(Cliente client)
+        {
+            RaiseEvent(new ClientBookedRoomEvent(Id, client.Id));
         }
     }
 }

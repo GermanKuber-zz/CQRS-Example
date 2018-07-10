@@ -7,4 +7,8 @@ namespace Cqrs.Hotel.Data.Repositories.Interfaces
     {
         Cliente GetById(Guid id);
     }
+    public interface IRoomRepository
+    {
+        Habitacion GetById(Guid id);
+    }
 }

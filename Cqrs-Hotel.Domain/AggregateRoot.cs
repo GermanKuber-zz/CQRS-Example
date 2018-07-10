@@ -23,10 +23,4 @@ namespace Cqrs.Hotel.Domain
             _uncommittedDomainEvents.Add(@event);
         }
     }
-
-    public interface IEventManager
-    {
-        IReadOnlyCollection<DomainEvent> UncommittedDomainEvents { get; }
-        void RaiseEvents(Func<DomainEvent, bool> raiseEvent);
-    }
 }

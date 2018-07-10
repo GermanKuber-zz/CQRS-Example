@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Cqrs.Hotel.Command;
-using Cqrs.Hotel.Command.Infraestructure;
+﻿using System.Threading.Tasks;
 using Cqrs.Hotel.Domain;
-using Cqrs.Hotel.Domain.Events;
-using Cqrs.Hotel.Domain.Events.LeftClientRoom;
 using MediatR;
 
 namespace Cqrs.Hotel.Infraestructure
@@ -23,7 +16,7 @@ namespace Cqrs.Hotel.Infraestructure
             _domainEventStore = domainEventStore;
         }
 
-        public Task<TResponse> Send<TCommand, TResponse>(TCommand command) where TCommand : IDomainCommand<TResponse>
+        public Task<TResponse> Send<TCommand, TResponse>(TCommand command) where TCommand : Commands.IDomainCommand<TResponse>
         {
             return _mediator.Send(command);
         }

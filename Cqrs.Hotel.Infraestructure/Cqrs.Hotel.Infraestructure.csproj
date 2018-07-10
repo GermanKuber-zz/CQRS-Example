@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cqrs-Hotel.Command\Cqrs.Hotel.Command.csproj" />
     <ProjectReference Include="..\Cqrs-Hotel.Domain\Cqrs.Hotel.Domain.csproj" />
   </ItemGroup>
 

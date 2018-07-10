@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Cqrs-Hotel.Command\Cqrs.Hotel.Command.csproj" />
     <ProjectReference Include="..\..\Cqrs.Hotel.Data\Cqrs.Hotel.Data.csproj" />
     <ProjectReference Include="..\..\Cqrs.Hotel.Infraestructure\Cqrs.Hotel.Infraestructure.csproj" />
   </ItemGroup>

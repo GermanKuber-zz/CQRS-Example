@@ -7,9 +7,4 @@ namespace Cqrs.Hotel.Data
     {
         Reserva GetById(Guid id);
     }
-
-    public interface IBaseRepository <in TEntity>
-    {                                
-        void SaveChange(TEntity booking);
-    }
 }

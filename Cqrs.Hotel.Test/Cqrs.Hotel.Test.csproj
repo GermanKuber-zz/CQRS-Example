@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Cqrs-Hotel.Command\Cqrs.Hotel.Command.csproj" />
     <ProjectReference Include="..\src\Cqrs-Hotel\Cqrs.Hotel.csproj" />
   </ItemGroup>
 

@@ -1,5 +1,5 @@
 ﻿using System;
-using Cqrs.Hotel.Command.Infraestructure;
+using Cqrs.Hotel.Infraestructure.Commands;
 
 namespace Cqrs.Hotel.Command.Commands.LeaveRoom
 {

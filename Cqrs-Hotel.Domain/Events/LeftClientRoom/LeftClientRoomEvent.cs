@@ -1,5 +1,4 @@
 ﻿using System;
-using MediatR;
 
 namespace Cqrs.Hotel.Domain.Events.LeftClientRoom
 {

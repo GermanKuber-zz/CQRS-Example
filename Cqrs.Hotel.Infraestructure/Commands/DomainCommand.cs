@@ -1,7 +1,6 @@
 ﻿using System;
-using MediatR;
 
-namespace Cqrs.Hotel.Command.Infraestructure
+namespace Cqrs.Hotel.Infraestructure.Commands
 {
     public class DomainCommand<TResponse> : IDomainCommand<TResponse>
     {

@@ -14,6 +14,8 @@ namespace Cqrs.Hotel.Test
         {
             var hotel = new Hotel();
             var scope = hotel.Initilize();
+
+            scope.Resolve<IBus>().Send<LeaveRoomCommand, bool>(new LeaveRoomCommand(Guid.NewGuid()));
         }
     }
 }

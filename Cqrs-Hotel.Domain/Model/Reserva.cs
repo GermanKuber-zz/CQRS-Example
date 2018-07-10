@@ -1,5 +1,4 @@
 ﻿using System;
-using Cqrs.Hotel.Domain.Events;
 using Cqrs.Hotel.Domain.Events.LeftClientRoom;
 
 namespace Cqrs.Hotel.Domain.Model

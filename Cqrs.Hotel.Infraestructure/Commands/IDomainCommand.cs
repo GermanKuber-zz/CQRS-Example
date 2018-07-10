@@ -1,7 +1,7 @@
 ﻿using System;
 using MediatR;
 
-namespace Cqrs.Hotel.Command.Infraestructure
+namespace Cqrs.Hotel.Infraestructure.Commands
 {
     public interface IDomainCommand<TResponse> : IRequest<TResponse>
     {

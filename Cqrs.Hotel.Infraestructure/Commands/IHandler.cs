@@ -1,7 +1,6 @@
-﻿using System.Net.NetworkInformation;
-using MediatR;
+﻿using MediatR;
 
-namespace Cqrs.Hotel.Command.Infraestructure
+namespace Cqrs.Hotel.Infraestructure.Commands
 {
     public interface IHandler<in TCommand,TResponse> : IRequestHandler<TCommand, TResponse> where TCommand : IRequest<TResponse>
     {

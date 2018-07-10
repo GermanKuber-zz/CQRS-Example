@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Xml.Schema;
 
 namespace Cqrs.Hotel.Domain.Model
 {

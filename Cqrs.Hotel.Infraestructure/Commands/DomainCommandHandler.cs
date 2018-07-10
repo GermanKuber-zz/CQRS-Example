@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using MediatR;
 
-namespace Cqrs.Hotel.Command.Infraestructure
+namespace Cqrs.Hotel.Infraestructure.Commands
 {
     public abstract class DomainCommandHandler<TCommand,TResponse> : IHandler<TCommand,TResponse> where TCommand : IRequest<TResponse>
     {

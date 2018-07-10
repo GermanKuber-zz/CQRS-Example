@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Cqrs.Hotel.Infraestructure.Commands
 {
-    public abstract class DomainCommandHandler<TCommand,TResponse> : IHandler<TCommand,TResponse> where TCommand : IRequest<TResponse>
+    public abstract class DomainCommandHandler<TCommand> : AsyncRequestHandler<TCommand>,IHandler<TCommand> where TCommand : IRequest
     {
 
         public DomainCommandHandler()
@@ -12,7 +12,7 @@ namespace Cqrs.Hotel.Infraestructure.Commands
             
         }
 
-        public abstract Task<TResponse> Handle(TCommand request, CancellationToken cancellationToken = default(CancellationToken) );
+        protected abstract override Task Handle(TCommand request, CancellationToken cancellationToken = default(CancellationToken) );
     }
 
    

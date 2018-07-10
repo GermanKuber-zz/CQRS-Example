@@ -2,7 +2,6 @@
 using Autofac;
 using Cqrs.Hotel.Command.Commands.LeaveRoom;
 using Cqrs.Hotel.Infraestructure;
-using MediatR;
 using Xunit;
 
 namespace Cqrs.Hotel.Test
@@ -19,7 +18,8 @@ namespace Cqrs.Hotel.Test
                 var hotel = new Hotel();
                 var scope = hotel.Initilize();
 
-                scope.Resolve<IBus>().Send<LeaveRoomCommand, bool>(new LeaveRoomCommand(Guid.NewGuid()));
+                scope.Resolve<IBus>().Send(new LeaveRoomCommand(Guid.NewGuid()));
+                var algo = "";
             }
             catch (Exception e)
             {

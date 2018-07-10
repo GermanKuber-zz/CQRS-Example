@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using Autofac;
-using Cqrs.Hotel.Command.Commands.LeaveRoom;
+using Cqrs.Hotel.Command.Sagas;
 using Cqrs.Hotel.Data;
 using Cqrs.Hotel.Data.Repositories;
 using Cqrs.Hotel.Data.Repositories.Interfaces;

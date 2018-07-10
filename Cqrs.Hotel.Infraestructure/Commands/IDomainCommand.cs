@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Cqrs.Hotel.Infraestructure.Commands
 {
-    public interface IDomainCommand<TResponse> : IRequest<TResponse>
+    public interface IDomainCommand : IRequest
     {
         Guid Id { get; }
     }

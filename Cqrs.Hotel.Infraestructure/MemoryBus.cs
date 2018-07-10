@@ -16,9 +16,9 @@ namespace Cqrs.Hotel.Infraestructure
             _eventRepository = eventRepository;
         }
 
-        public Task<TResponse> Send<TCommand, TResponse>(TCommand command) where TCommand : Commands.IDomainCommand<TResponse>
+        public void Send<TCommand>(TCommand command) where TCommand : Commands.IDomainCommand
         {
-            return _mediator.Send(command);
+            _mediator.Send(command);
         }
 
         public void RaiseEvent<T>(T @event) where T : DomainEvent

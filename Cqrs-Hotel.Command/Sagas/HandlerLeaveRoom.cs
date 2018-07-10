@@ -1,12 +1,12 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using Cqrs.Hotel.Data;
+using Cqrs.Hotel.Command.Commands.LeaveRoom;
 using Cqrs.Hotel.Data.Repositories.Interfaces;
 using Cqrs.Hotel.Infraestructure.Commands;
 
-namespace Cqrs.Hotel.Command.Commands.LeaveRoom
+namespace Cqrs.Hotel.Command.Sagas
 {
-    public class HandlerLeaveRoom : DomainCommandHandler<LeaveRoomCommand, bool>
+    public class HandlerLeaveRoom : DomainCommandHandler<LeaveRoomCommand>
     {
         private readonly IBookingRepository _bookingRepository;
 
@@ -14,8 +14,10 @@ namespace Cqrs.Hotel.Command.Commands.LeaveRoom
         {
             _bookingRepository = bookingRepository;
         }
-        public override Task<bool> Handle(LeaveRoomCommand request, CancellationToken cancellationToken = default(CancellationToken))
+
+        protected override Task Handle(LeaveRoomCommand request, CancellationToken cancellationToken = default(CancellationToken))
         {
+            Task.WaitAny(default(Task[]), 99999);
             var booking = _bookingRepository.GetById(request.BookingId);
             booking.Leave();
 

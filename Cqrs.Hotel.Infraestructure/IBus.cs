@@ -5,7 +5,7 @@ namespace Cqrs.Hotel.Infraestructure
 {
     public interface IBus
     {
-        Task<TResponse> Send<TCommand, TResponse>(TCommand command)  where TCommand : Commands.IDomainCommand<TResponse>;
+        void Send<TCommand>(TCommand command)  where TCommand : Commands.IDomainCommand;
 
         void RaiseEvent<T>(T theEvent) where T : DomainEvent; 
     }

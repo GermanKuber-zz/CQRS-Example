@@ -2,6 +2,8 @@
 using Autofac;
 using Cqrs.Hotel.Command.Commands.LeaveRoom;
 using Cqrs.Hotel.Data;
+using Cqrs.Hotel.Data.Repositories;
+using Cqrs.Hotel.Data.Repositories.Interfaces;
 using Cqrs.Hotel.Domain;
 using Cqrs.Hotel.Infraestructure;
 using MediatR;

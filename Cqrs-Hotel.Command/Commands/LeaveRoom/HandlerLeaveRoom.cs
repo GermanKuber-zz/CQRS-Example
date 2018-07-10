@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using Cqrs.Hotel.Data;
+using Cqrs.Hotel.Data.Repositories.Interfaces;
 using Cqrs.Hotel.Infraestructure.Commands;
 
 namespace Cqrs.Hotel.Command.Commands.LeaveRoom

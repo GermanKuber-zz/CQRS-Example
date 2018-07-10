@@ -1,7 +1,7 @@
 ﻿using System;
 using Cqrs.Hotel.Domain.Model;
 
-namespace Cqrs.Hotel.Data
+namespace Cqrs.Hotel.Data.Repositories.Interfaces
 {
     public interface IClientRepository
     {

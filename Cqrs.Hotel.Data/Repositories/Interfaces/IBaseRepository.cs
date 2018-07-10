@@ -1,4 +1,4 @@
-﻿namespace Cqrs.Hotel.Data
+﻿namespace Cqrs.Hotel.Data.Repositories.Interfaces
 {
     public interface IBaseRepository <in TEntity>
     {                                

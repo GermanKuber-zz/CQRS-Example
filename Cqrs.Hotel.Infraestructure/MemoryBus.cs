@@ -7,13 +7,13 @@ namespace Cqrs.Hotel.Infraestructure
     public class MemoryBus : IBus
     {
         private readonly IMediator _mediator;
-        private readonly IDomainEventStore _domainEventStore;
+        private readonly IDomainEventRepository _eventRepository;
 
         public MemoryBus(IMediator mediator,
-            IDomainEventStore domainEventStore)
+            IDomainEventRepository eventRepository)
         {
             _mediator = mediator;
-            _domainEventStore = domainEventStore;
+            _eventRepository = eventRepository;
         }
 
         public Task<TResponse> Send<TCommand, TResponse>(TCommand command) where TCommand : Commands.IDomainCommand<TResponse>
@@ -24,6 +24,7 @@ namespace Cqrs.Hotel.Infraestructure
         public void RaiseEvent<T>(T @event) where T : DomainEvent
         {
             _mediator.Publish(@event);
+            _eventRepository.Add(@event);
         }
     }
 }

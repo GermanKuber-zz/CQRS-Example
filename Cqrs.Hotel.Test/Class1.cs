@@ -12,10 +12,20 @@ namespace Cqrs.Hotel.Test
         [Fact]
         public void PassingTest()
         {
-            var hotel = new Hotel();
-            var scope = hotel.Initilize();
+            try
+            {
 
-            scope.Resolve<IBus>().Send<LeaveRoomCommand, bool>(new LeaveRoomCommand(Guid.NewGuid()));
+
+                var hotel = new Hotel();
+                var scope = hotel.Initilize();
+
+                scope.Resolve<IBus>().Send<LeaveRoomCommand, bool>(new LeaveRoomCommand(Guid.NewGuid()));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }

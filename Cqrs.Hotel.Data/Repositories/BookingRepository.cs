@@ -14,4 +14,6 @@ namespace Cqrs.Hotel.Data
         public Reserva GetById(Guid id) => new Reserva(new Cliente("Germán", "Küber"), new Habitacion());
 
     }
+
+ 
 }

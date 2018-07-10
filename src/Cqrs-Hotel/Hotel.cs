@@ -48,7 +48,9 @@ namespace Cqrs.Hotel
             builder.RegisterType<DomainEventStore>().As<IDomainEventStore>();
             builder.RegisterType<ClientRepository>().As<IClientRepository>();
             builder.RegisterType<BookingRepository>().As<IBookingRepository>();
+            builder.RegisterType<DomainEventRepository>().As<IDomainEventRepository>();
 
+          
 
             var container = builder.Build();
 
